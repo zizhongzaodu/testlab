@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "e75dc613169f8b02",
+    "type": "split",
+    "children": [
+      {
+        "id": "6506bf9fb94a9c36",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aab3423ea64cbe2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "template/字典(模板).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8a832febd465b2ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "70a5b09da4b6c587",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0edacb529a044442",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "189568cb8d19a8f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4bdfde3488efba17",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "00efc13d630c78fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "333f3d0bbb680713",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdd1a3c542f632bd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "61f66c459dd3c81a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "template/字典(模板).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2bcc75851cbac7bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "template/字典(模板).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b05cef9daf118bbe",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "731cc425cb57435c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "template/字典(模板).md"
+              }
+            }
+          },
+          {
+            "id": "31ac0937001d8878",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 603.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "aab3423ea64cbe2f",
+  "lastOpenFiles": [
+    "Excalidraw/2024-09-13.excalidraw.md",
+    "Invalid date.md",
+    "template/字典(模板).md",
+    "2021-08-09.md",
+    "template",
+    "Excalidraw/2024-09-14.excalidraw.md",
+    "Excalidraw/Drawing 2024-09-21 21.10.44.excalidraw.md",
+    "Excalidraw/未命名.canvas",
+    "白板测试.canvas",
+    "属性测试.md",
+    "未命名.md",
+    "dataview test.md",
+    "典/竭.md",
+    "典/渴.md",
+    "MarkDown超级教程 Obsidian版 2022.1.12.md",
+    "追忆.md",
+    "典",
+    "Excalidraw/Drawing 2024-09-13 20.12.34.excalidraw.md",
+    "Excalidraw/Drawing 2024-09-13 20.12.07.excalidraw.md",
+    "Excalidraw",
+    "notes/Drawing 2024-09-13 20.11.41.excalidraw.md",
+    "notes",
+    "_debug_remotely_save/profiler_results_exported_on_1726224072894.md",
+    "_debug_remotely_save/profiler_results_exported_on_1726224064353.md",
+    "_debug_remotely_save",
+    "MarkDown超级教程 Obsidian版 2022.1.12 1.md",
+    "MOC Mermiad 教程 Obsidian版.md",
+    "欢迎.md",
+    "总表.md"
+  ]
+}

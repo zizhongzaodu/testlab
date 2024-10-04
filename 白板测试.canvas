@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"006e723aab4b92a2","type":"text","text":"目前还是不能确定","x":-680,"y":-140,"width":200,"height":60,"color":"4"},
+		{"id":"8661fc57d568d16a","type":"file","file":"典/渴.md","x":-729,"y":60,"width":299,"height":264},
+		{"id":"7ca61414efa2f0a2","type":"text","text":"但是还可以","x":-315,"y":-140,"width":250,"height":60},
+		{"id":"41596a2d73fdf779","type":"file","file":"Excalidraw/Drawing 2024-09-21 21.10.44.excalidraw.md","x":-260,"y":-520,"width":305,"height":278}
+	],
+	"edges":[
+		{"id":"44eb220930df3c35","fromNode":"006e723aab4b92a2","fromSide":"bottom","toNode":"8661fc57d568d16a","toSide":"top"},
+		{"id":"8fb64892ebe926d3","fromNode":"006e723aab4b92a2","fromSide":"right","toNode":"7ca61414efa2f0a2","toSide":"left"},
+		{"id":"7efafd82e5472174","fromNode":"7ca61414efa2f0a2","fromSide":"top","toNode":"41596a2d73fdf779","toSide":"bottom"}
+	]
+}
