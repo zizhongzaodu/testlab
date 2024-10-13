@@ -11,8 +11,12 @@
             "id": "65b20712b31a026d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "baoe.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "baoe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "baoe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "baoe.md"
+              }
             }
           },
           {
@@ -160,7 +168,7 @@
   },
   "active": "65b20712b31a026d",
   "lastOpenFiles": [
-    "bao.md",
+    "baoe.md",
     "未命名.md",
     "dataview test.md",
     "Invalid date.md",
