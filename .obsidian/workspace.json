@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6506bf9fb94a9c36",
+        "id": "413620905c23cf25",
         "type": "tabs",
         "children": [
           {
-            "id": "aab3423ea64cbe2f",
+            "id": "65b20712b31a026d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未命名.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -96,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "未命名.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,12 +158,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aab3423ea64cbe2f",
+  "active": "65b20712b31a026d",
   "lastOpenFiles": [
+    "bao.md",
+    "未命名.md",
     "dataview test.md",
     "Invalid date.md",
     "属性测试.md",
-    "未命名.md",
     "典/渴.md",
     "典/竭.md",
     "Excalidraw/Drawing 2024-09-21 21.10.44.excalidraw.md",
