@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玄洲仙录 - 仙侠游戏官方百科</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", 宋体, serif;
+        }
+        body {
+            background: #0c0c1a;
+            color: #e6e6f2;
+            background-image: url('https://picsum.photos/id/1036/1920/1080');
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+        /* 顶部导航 */
+        header {
+            background: rgba(12, 8, 30, 0.85);
+            border-bottom: 1px solid #8c6fff;
+            padding: 15px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .logo {
+            font-size: 28px;
+            color: #c8a4ff;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        .nav-list {
+            display: flex;
+            gap: 35px;
+        }
+        .nav-list a {
+            color: #d8c8ff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .nav-list a:hover {
+            background: #7b4cff40;
+            color: #fff;
+        }
+        /* 轮播横幅 */
+        .banner {
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner-box {
+            width: 300%;
+            height: 100%;
+            display: flex;
+            transition: 0.8s ease;
+        }
+        .banner-item {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding-left: 100px;
+            background-blend-mode: overlay;
+            background-color: rgba(0,0,0,0.45);
+        }
+        .banner-text h2 {
+            font-size: 46px;
+            color: #fff;
+            text-shadow: 0 0 12px #9468ff;
+            margin-bottom: 15px;
+        }
+        .banner-text p {
+            font-size: 18px;
+            color: #e0d4ff;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+        /* 主容器 */
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+        .title-block {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .title-block h1 {
+            font-size: 36px;
+            color: #d1b6ff;
+            margin-bottom: 12px;
+            letter-spacing: 3px;
+        }
+        .title-block span {
+            display: inline-block;
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #9468ff, transparent);
+        }
+        /* 四大百科模块 */
+        .wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .wiki-card {
+            background: rgba(22, 14, 48, 0.78);
+            border: 1px solid #7c5bff70;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+        .wiki-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px #8c6fff60;
+            border-color: #b392ff;
+        }
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-body h3 {
+            font-size: 22px;
+            color: #c9b0ff;
+            margin-bottom: 10px;
+        }
+        .card-body p {
+            color: #b8a9d8;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .card-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 7px 18px;
+            border: 1px solid #9468ff;
+            color: #d8c8ff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .card-btn:hover {
+            background: #8c6fff;
+            color: #fff;
+        }
+        /* 世界观板块 */
+        .world-view {
+            background: rgba(18, 10, 40, 0.82);
+            border: 1px solid #7c5bff66;
+            border-radius: 12px;
+            padding: 45px;
+            margin-bottom: 60px;
+        }
+        .world-view h2 {
+            font-size: 30px;
+            color: #d3bbff;
+            margin-bottom: 20px;
+        }
+        .world-view p {
+            line-height: 2;
+            font-size: 16px;
+            color: #d0c4ef;
+        }
+        /* 热门词条排行 */
+        .rank-wrap {
+            display: flex;
+            gap: 40px;
+        }
+        .rank-box {
+            flex: 1;
+            background: rgba(20, 12, 45, 0.75);
+            border: 1px solid #7c5bff60;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .rank-box h3 {
+            font-size: 24px;
+            color: #c9b0ff;
+            margin-bottom: 22px;
+        }
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #543b8044;
+        }
+        .rank-num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #7c5bff;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+        }
+        .rank-item a {
+            color: #d1c2f0;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .rank-item a:hover {
+            color: #b392ff;
+        }
+        /* 页脚 */
+        footer {
+            background: #0b081c;
+            border-top: 1px solid #7c5bff60;
+            padding: 40px 80px;
+            margin-top: 80px;
+            text-align: center;
+            color: #9989bf;
+        }
+        footer p {
+            line-height: 1.9;
+            font-size: 14px;
+        }
+        /* 移动端适配 */
+        @media (max-width: 1080px) {
+            .wiki-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .rank-wrap {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+            .nav-list {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:18px;
+            }
+            .wiki-grid {
+                grid-template-columns: 1fr;
+            }
+            .banner-text h2 {
+                font-size: 30px;
+            }
+            .banner-item {
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">玄洲仙录 百科</div>
+        <nav class="nav-list">
+            <a href="#home">首页</a>
+            <a href="#sect">门派图鉴</a>
+            <a href="#skill">功法秘术</a>
+            <a href="#pet">灵宠异兽</a>
+            <a href="#item">天材地宝</a>
+            <a href="#world">三界世界观</a>
+        </nav>
+    </header>
+
+    <!-- 轮播横幅 -->
+    <section class="banner">
+        <div class="banner-box" id="bannerSlide">
+            <div class="banner-item" style="background-image:url(https://picsum.photos/id/1036/1920/420)">
+                <div class="banner-text">
+                    <h2>踏破凡尘，问道玄洲</h2>
+                    <p>完整收录《玄洲仙录》全游戏资料，门派、功法、法宝、妖兽、秘境全图鉴，修仙路上万事可查。</p>
+                </div>
+            </div>
+            <div class="banner-item" style="background-image:url(https://picsum.photos/id/1031/1920/420)">
+                <div class="banner-text">
+                    <h2>上古秘境现世</h2>
+                    <p>昆仑墟、幽冥渊、蓬莱仙岛全地图解析，隐藏任务、稀有掉落、BOSS机制一览无余。</p>
+                </div>
+            </div>
+            <div class="banner-item" style="background-image:url(https://picsum.photos/id/1048/1920/420)">
+                <div class="banner-text">
+                    <h2>万道功法百科</h2>
+                    <p>金丹、元婴、化神全套修炼体系，稀有心法、御剑神通、丹道符箓详细攻略。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主内容区 -->
+    <div class="container" id="home">
+        <div class="title-block">
+            <h1>修仙百科四大图鉴</h1>
+            <span></span>
+        </div>
+
+        <!-- 四大百科卡片 -->
+        <div class="wiki-grid">
+            <div class="wiki-card" id="sect">
+                <img src="https://picsum.photos/id/1039/400/180" alt="门派图鉴" class="card-img">
+                <div class="card-body">
+                    <h3>门派图鉴</h3>
+                    <p>青云宗、合欢谷、万魔窟、佛门、妖族各大势力，宗门功法、专属坐骑、主线剧情全收录。</p>
+                    <a href="#" class="card-btn>进入图鉴</a>
+                </div>
+            </div>
+            <div class="wiki-card" id="skill">
+                <img src="https://picsum.photos/id/1041/400/180" alt="功法秘术" class="card-img">
+                <div class="card-body">
+                    <h3>功法秘术</h3>
+                    <p>肉身、剑修、法修、丹修、符道全流派功法，境界突破条件、神通效果、获取途径详解。</p>
+                    <a href="#" class="card-btn>进入图鉴</a>
+                </div>
+            </div>
+            <div class="wiki-card" id="pet">
+                <img src="https://picsum.photos/id/1038/400/180" alt="灵宠异兽" class="card-img">
+                <div class="card-body">
+                    <h3>灵宠异兽</h3>
+                    <p>神兽、仙禽、魔宠、上古凶兽资质图鉴，进化路线、专属技能、捕捉地点完整资料。</p>
+                    <a href="#" class="card-btn>进入图鉴</a>
+                </div>
+            </div>
+            <div class="wiki-card" id="item">
+                <img src="https://picsum.photos/id/1043/400/180" alt="天材地宝" class="card-img">
+                <div class="card-body">
+                    <h3>天材地宝</h3>
+                    <p>神器法宝、上古丹药、灵草矿石、符咒阵法，装备强化、炼器锻造配方大全。</p>
+                    <a href="#" class="card-btn>进入图鉴</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 三界世界观 -->
+        <div class="world-view" id="world">
+            <h2>三界世界观 · 玄洲大陆</h2>
+            <p>自开天辟地，天地分为三界九天：凡界人居、仙界长生、魔界永夜。上古仙魔大战打碎天道壁垒，灵气外泄，凡人间修士兴起，以求长生大道。
+            <br><br>
+            凡界分为东土九州、西荒魔域、北海冰原、南疆万妖岭。正道宗门镇守九州，魔道盘踞西荒，妖族世代居于南疆。修士从炼气起步，历经筑基、金丹、元婴、化神、炼虚、合体、大乘、渡劫八大境界，渡劫成功便可飞升九天仙界；心魔难渡者，则坠入魔界，永失仙途。
+            <br><br>
+            世间散落上古仙尊遗留秘境，藏有无上功法、神器灵根，但亦有强大凶兽与心魔陷阱。本百科完整整理大陆历史、种族起源、上古传说、势力纷争，还原完整修仙世界设定。
+            </p>
+        </div>
+
+        <!-- 热门词条排行 -->
+        <div class="rank-wrap">
+            <div class="rank-box">
+                <h3>热门门派排行</h3>
+                <div class="rank-item">
+                    <span class="rank-num">1</span>
+                    <a href="#">青云宗 · 正道第一宗门</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">2</span>
+                    <a href="#">万魔窟 · 魔界至尊势力</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">3</span>
+                    <a href="#">灵山佛门 · 渡化众生</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">4</span>
+                    <a href="#">南疆万妖殿 · 妖族圣地</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">5</span>
+                    <a href="#">合欢谷 · 双修独门传承</a>
+                </div>
+            </div>
+            <div class="rank-box">
+                <h3>最强功法排行</h3>
+                <div class="rank-item">
+                    <span class="rank-num">1</span>
+                    <a href="#">《鸿蒙太上诀》 仙尊顶级心法</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">2</span>
+                    <a href="#">《诛仙剑诀》 剑道至高神通</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">3</span>
+                    <a href="#">《九幽魔典》 魔道无上功法</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">4</span>
+                    <a href="#">《大如来心经》 佛门本源心法</a>
+                </div>
+                <div class="rank-item">
+                    <span class="rank-num">5</span>
+                    <a href="#">《九转丹神录》 丹道圣典</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>《玄洲仙录》游戏百科 | 全游戏资料收集整理平台</p>
+        <p>本百科内容仅供玩家查阅攻略，游戏版权归属官方运营团队</p>
+        <p>© 2026 玄洲仙录Wiki 仙侠百科 保留所有权利</p>
+    </footer>
+
+    <!-- 轮播自动切换JS -->
+    <script>
+        let slideIndex = 0;
+        const banner = document.getElementById('bannerSlide');
+        function autoSlide() {
+            slideIndex++;
+            if (slideIndex > 2) slideIndex = 0;
+            banner.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+        setInterval(autoSlide, 4500);
+    </script>
+</body>
+</html>
